@@ -2,16 +2,18 @@
 
 const LoanCard = () => {
     return (
-        <section className="asset_card">
-            <div className="asset_card__image-container">
-                <img src="#" className="asset_card__image"/>
+        <section className="loan_card">
+            <div className="loan_card__image_container">
+                <img src="/assets/link.png" className="loan_card__image"/>
             </div>
 
-            <section className="asset_card__body">
-                <h2>Title</h2>
-                <div className="asset_card__detail-container">
-                    <span>price</span>
-                    <span>0xaefda...eadea</span>
+            <section className="loan_card__body">
+                <h2>Avail: $10,000</h2>
+                <div className="loan_card__detail_container">
+                    <span>Lender: 0xaefda...eadea</span>
+                    <span>Interest rate: 5%</span>
+                    <span>duration: 5 months</span>
+
                 </div>
             </section>
         </section>

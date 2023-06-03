@@ -1,5 +1,23 @@
 /* BEM Styling adoption */
 
+
+/* Main section begin */
+.main {
+    
+    padding: 4rem;
+    
+}
+
+.main_inner{
+    display: flex;
+    flex-direction: column;
+    max-width: 90vw;
+    margin: 0 auto;
+    gap: 10rem;
+}
+
+/* main section end */
+
 /* Banner Section Begin */
 .banner{
 
@@ -67,20 +85,132 @@
 /* Banner Section end */
 
 
-/* Main section begin */
-.main {
-    height: 60vh;
-    background-color: black;
+
+
+/* Asset Marketplace begin */
+
+.asset_market__container{
     display: flex;
+    gap: 2rem;
     flex-direction: column;
-    padding: 4rem;
 }
 
-.main_inner{
-    display: flex;
-    flex-direction: column;
-    max-width: 90vw;
-    margin: 0 auto;
+.asset_market__container h3{
+    font-size: 2rem;
+    color: white;
 }
 
-/* main section end */
+.asset__marketplace_inner{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3rem;
+}
+
+/* Asset marketplace end */
+
+/* Asset card begin */
+
+.asset_card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    background-color: #BCC1FA;
+}
+
+.asset_card:hover{
+    transform: scale(1.1);
+    transition: transform .5s ease-in-out;
+    cursor: pointer;
+}
+
+.asset_card__image_container{
+
+}
+
+.asset_card__image{
+    width: 100%;
+    height: 100%;
+}
+
+.asset_card__detail_container{
+    color: white;
+}
+
+.asset_card__body{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+/* Asset card end */
+
+
+/* Loan Marketplace begin */
+
+.loan_market__container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.loan_market__container h3{
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.loan__marketplace_inner{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3rem;
+}
+
+/* Loan marketplace end */
+
+
+
+/* Loan card begin */
+
+.loan_card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    background-color: #BCC1FA;
+}
+
+.loan_card:hover{
+    transform: scale(1.1);
+    transition: transform .5s ease-in-out;
+    cursor: pointer;
+}
+
+.loan_card__image_container{
+    height: 10rem;
+
+}
+
+.loan_card__image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.loan_card__detail_container{
+    color: #5865F2;
+    display: flex;
+    flex-direction: column;
+}
+
+.loan_card__body{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    color: #5865F2;
+}
+
+.loan_card__body h2{
+   font-size: 1.7rem;
+}
+/* Loan card end */
