@@ -18,11 +18,14 @@ export default function Home() {
 			  <link rel="icon" href="/favicon.ico" />
 		  </Head>
 		  <Layout>
-			  <Banner/>
-			  <AssetMarketplace/>
-			  {/* Asset Marketplace section */}
-			  <LoanMarketplace/>
-			  {/* Loan marketplace section */}
+			<main className='main'>
+				<section className='main_inner'>
+					<Banner/>
+					<AssetMarketplace/>
+					<LoanMarketplace/>
+				</section>
+			</main>
+
 		  </Layout>
 	  </>
 	);
