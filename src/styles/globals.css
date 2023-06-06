@@ -14,7 +14,8 @@
 body {
 	font-family: "Poppins", sans-serif;
 	font-weight: 500;
-	background-color: #1e1e1e;
+	background: linear-gradient(to bottom, #1D1E2A, #201D2B, #0C0C0C);
+	background-color: #0C0C0C;
 }
 
 .active_link {
