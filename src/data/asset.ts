@@ -1,40 +1,90 @@
+/** @format */
+
 const Assets = [
 	{
 		assetName: "Gaming Guild",
-		price: "10.8ETH",
-		address: "0x43B4439e804675F27e8088522bCa2d8F2D7053B5",
+
+		assetDetails:
+			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...s",
 	},
 	{
 		assetName: "Gaming Guild",
-		price: "10.8ETH",
-		address: "0x43B4439e804675F27e8088522bCa2d8F2D7053B5",
+
+		assetDetails:
+			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...s",
 	},
 	{
 		assetName: "Gaming Guild",
-		price: "10.8ETH",
-		address: "0x43B4439e804675F27e8088522bCa2d8F2D7053B5",
+
+		assetDetails:
+			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...s",
 	},
 	{
 		assetName: "Gaming Guild",
-		price: "10.8ETH",
-		address: "0x43B4439e804675F27e8088522bCa2d8F2D7053B5",
+
+		assetDetails:
+			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...s",
 	},
 	{
 		assetName: "Gaming Guild",
-		price: "10.8ETH",
-		address: "0x43B4439e804675F27e8088522bCa2d8F2D7053B5",
+
+		assetDetails:
+			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...s",
 	},
 	{
 		assetName: "Gaming Guild",
-		price: "10.8ETH",
-		address: "0x43B4439e804675F27e8088522bCa2d8F2D7053B5",
+
+		assetDetails:
+			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...s",
 	},
 	{
 		assetName: "Gaming Guild",
-		price: "10.8ETH",
-		address: "0x43B4439e804675F27e8088522bCa2d8F2D7053B5",
+
+		assetDetails:
+			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...s",
+	},
+	{
+		assetName: "Gaming Guild",
+
+		assetDetails:
+			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...s",
+	},
+	{
+		assetName: "Gaming Guild",
+
+		assetDetails:
+			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...s",
+	},
+	{
+		assetName: "Gaming Guild",
+
+		assetDetails:
+			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...s",
+	},
+	{
+		assetName: "Gaming Guild",
+
+		assetDetails:
+			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...s",
+	},
+	{
+		assetName: "Gaming Guild",
+
+		assetDetails:
+			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...s",
+	},
+	{
+		assetName: "Gaming Guild",
+
+		assetDetails:
+			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...s",
+	},
+	{
+		assetName: "Gaming Guild",
+
+		assetDetails:
+			"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard...s",
 	},
 ];
-
 
 export default Assets;
