@@ -478,16 +478,43 @@
 .search__component{
     display: flex;
     gap: 2rem;
+    justify-content: space-between;
 }
 
 .search__selector{
     border-radius: 4rem;
+    flex: 1;
     border: .1rem solid #5E6A73;
     padding: .1rem;
+    padding: .4rem .5rem;
+    background-color: transparent;
+    color: white;
+
 }
 
 
 .form__grouper{
+    flex: 1;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
     border: .1rem solid #5E6A73;
-    
+}
+
+
+.form__control{
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: transparent;
+}
+
+.form__control:focus{
+  outline: none;
+}
+
+.search__results_count{
+  color: #5E6A73;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -6,6 +6,7 @@ import Banner from '@/components/Banner';
 import AssetMarketplace from '@/components/AssetMarketplace';
 import LoanMarketplace from '@/components/LoanMarketplace';
 import LoanCard from '@/components/LoanCard';
+import SearchSystem from '@/components/SearchSystem';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -21,6 +22,7 @@ export default function Loans() {
 		  <Layout>
 			<main className='main'>
 				<section className='main_inner'>
+					<SearchSystem/>
 					<div className="loan__marketplace_inner">
 						<LoanCard/>
 						<LoanCard/>
