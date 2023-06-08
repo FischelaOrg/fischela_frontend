@@ -15,7 +15,9 @@ export default function Home() {
 				<meta name="description" content="Fischela" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<Layout>Profile</Layout>
+			<Layout>
+				
+			</Layout>
 		</>
 	);
 }
