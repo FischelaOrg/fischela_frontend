@@ -1,0 +1,16 @@
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding: 1rem 0;
+
+    p{
+        font-size:1.5rem;
+        font-weight:700;
+        color: white;
+    }
+}
+.connected_{
+    display: flex;
+    gap: 1rem;
+}
