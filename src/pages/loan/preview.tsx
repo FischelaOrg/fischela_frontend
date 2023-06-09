@@ -14,10 +14,14 @@ import {BiDetail} from "react-icons/bi";
 import {BsFillExclamationCircleFill} from "react-icons/bs"
 import {FcLike} from "react-icons/fc"
 import {TbListDetails} from "react-icons/tb"
+import { useContext } from 'react';
+import { AppContext } from '@/components/context/AppContext';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Preview() {
+	const {modalState, setModalState} = useContext(AppContext)
+
     const assetDesc = [
         {
             title: "Description",
@@ -109,7 +113,7 @@ export default function Preview() {
 
                             <div className='preview__image_container'>
                                 <div className='preview__image_container_inner'>
-                                    <img className='preview__image' src='/assets/link.png'/>
+                                    <Image alt="" className='preview__image' src='/assets/link.png'/>
                                 </div>
                                 
                                 <div className='preview__image_stats'>
@@ -174,7 +178,9 @@ export default function Preview() {
                                             </h4>
                                             <h6>$10,000</h6>
                                         </div>
-                                        <button className='preview__place_bid_btn'>
+                                        <button onClick={() => {
+                                            if (setModalState) setModalState(old =>({...old, isCreateBorrowModalOpen: true}))
+                                        }} className='preview__place_bid_btn'>
                                             Apply For Loan
                                         </button>
                                     </section>

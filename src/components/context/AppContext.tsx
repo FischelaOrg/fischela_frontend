@@ -4,6 +4,9 @@ import { Dispatch, SetStateAction, createContext, useContext, useState } from "r
 interface IModalState{
     isCreateAssetModalOpen?: boolean;
     isCreateLoanModalOpen?: boolean;
+    isCreateBorrowModalOpen?: boolean;
+    isStartAuctionModalOpen?: boolean;
+
 }
 
 interface ISetModalState{

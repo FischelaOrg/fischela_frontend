@@ -6,6 +6,7 @@ import "@/styles/styles.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "@rainbow-me/rainbowkit/styles.css";
+import { ApolloProvider } from "@apollo/client";
 import {
 	getDefaultWallets,
 	RainbowKitProvider,
@@ -17,6 +18,7 @@ import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 import type { AppProps } from "next/app";
 import { AppContextProvider } from "@/components/context/AppContext";
+import client from "@/grapghql/client";
 
 const { chains, publicClient } = configureChains(
 	[polygonMumbai],
@@ -39,21 +41,24 @@ const wagmiConfig = createConfig({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+	
 	return (
 		<AppContextProvider>
-			<WagmiConfig config={wagmiConfig}>
-				<RainbowKitProvider
-					chains={chains}
-					theme={darkTheme({
-						accentColor: "#5865F2",
-						accentColorForeground: "white",
-						borderRadius: "small",
-						fontStack: "system",
-						overlayBlur: "small",
-					})}>
-					<Component {...pageProps} />
-				</RainbowKitProvider>
-			</WagmiConfig>
+			<ApolloProvider client={client}>
+				<WagmiConfig config={wagmiConfig}>
+					<RainbowKitProvider
+						chains={chains}
+						theme={darkTheme({
+							accentColor: "#5865F2",
+							accentColorForeground: "white",
+							borderRadius: "small",
+							fontStack: "system",
+							overlayBlur: "small",
+						})}>
+						<Component {...pageProps} />
+					</RainbowKitProvider>
+				</WagmiConfig>
+			</ApolloProvider>
 		</AppContextProvider>
 	);
 }

@@ -109,7 +109,7 @@ export default function Preview() {
 
                             <div className='preview__image_container'>
                                 <div className='preview__image_container_inner'>
-                                    <img className='preview__image' src='/assets/gta.jpeg'/>
+                                    <Image alt="" className='preview__image' src='/assets/gta.jpeg'/>
                                 </div>
                                 
                                 <div className='preview__image_stats'>

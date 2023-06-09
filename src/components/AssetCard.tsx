@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { useRouter } from "next/router"
 
 const AssetCard = () => {
@@ -5,7 +6,7 @@ const AssetCard = () => {
     return (
         <section onClick={() => {router.push("/asset/preview")}} className="asset_card">
             <div className="asset_card__image_container">
-                <img src="/assets/gta.jpeg" className="asset_card__image"/>
+                <Image  src="/assets/gta.jpeg" alt="" className="asset_card__image"/>
             </div>
 
             <section className="asset_card__body">

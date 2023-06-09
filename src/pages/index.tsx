@@ -10,9 +10,11 @@ import { AppContext } from '@/components/context/AppContext';
 import CreateAssetModal from '@/components/modals/CreateAssetModal';
 
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+	
+
 
   return (
 	  <>

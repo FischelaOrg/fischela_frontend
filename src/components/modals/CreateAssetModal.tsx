@@ -1,23 +1,43 @@
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { AppContext } from "../context/AppContext"
-
+import { ethers } from "ethers";
+import { useContractWrite, usePrepareContractWrite } from 'wagmi'
+import nftAbi from "../../web3/nft.abi.json"
+import { nft } from "@/web3/contractAddresses";
 
 export default function CreateAssetModal() {
 	const {modalState, setModalState} = useContext(AppContext)
+    
 
     const [assetDetail, setAssetDetail] = useState({
         title: "GTA San Andreas",
         description: "An open world adventure game",
-        price: "$2,000",
+        price: 2000,
         assetURI: "https://gtasan.org",
-        revenue: "$1,000,000",
-        expenses: "$200,000",
-        traffic: "3,000,000",
+        revenue: 1000000,
+        expenses: 200000,
+        traffic: 3000000,
         productLink: "https://gtasan.whitepaper.org",
         ownerEmail: "norbertmbafrank@gmail.com",
     })
 
-    return (
+    const { data, isLoading, isSuccess, write } = useContractWrite({
+        address: nft,
+        abi: nftAbi,
+        functionName: 'mintNFT',
+        args: [assetDetail]
+      })
+
+    console.log(nftAbi, "HULI")
+    
+
+   useEffect(() => {
+    if(!isLoading) console.log(data, "HDJSKSKKS")
+
+   }, [data, isLoading])
+    
+
+    return ( 
         <section onClick={() => {
             if(modalState && setModalState)
             setModalState(old => ({...old, isCreateAssetModalOpen: false}))}} className="modal__overlay">
@@ -41,7 +61,7 @@ export default function CreateAssetModal() {
                         </div>
 
                         <div className="modal__form_group">
-                            <input onChange={e => setAssetDetail(old => ({...old, price: e.target.value}))} value={assetDetail.price} placeholder="Price" className="modal__form_control"/>
+                            <input onChange={e => setAssetDetail(old => ({...old, price: Number(e.target.value)}))} value={assetDetail.price} placeholder="Price" className="modal__form_control"/>
                         </div>
 
                         <div className="modal__form_group">
@@ -49,15 +69,15 @@ export default function CreateAssetModal() {
                         </div>
 
                         <div className="modal__form_group">
-                            <input onChange={e => setAssetDetail(old => ({...old, revenue: e.target.value}))} value={assetDetail.revenue} placeholder="Game Revenue" className="modal__form_control"/>
+                            <input onChange={e => setAssetDetail(old => ({...old, revenue: Number(e.target.value)}))} value={assetDetail.revenue} placeholder="Game Revenue" className="modal__form_control"/>
                         </div>
 
                         <div className="modal__form_group">
-                            <input onChange={e => setAssetDetail(old => ({...old, expenses: e.target.value}))} value={assetDetail.expenses} placeholder="Game Expenses" className="modal__form_control"/>
+                            <input onChange={e => setAssetDetail(old => ({...old, expenses: Number(e.target.value)}))} value={assetDetail.expenses} placeholder="Game Expenses" className="modal__form_control"/>
                         </div>
 
                         <div className="modal__form_group">
-                            <input onChange={e => setAssetDetail(old => ({...old, traffic: e.target.value}))} value={assetDetail.traffic} placeholder="Game Traffic" className="modal__form_control"/>
+                            <input onChange={e => setAssetDetail(old => ({...old, traffic:Number( e.target.value)}))} value={assetDetail.traffic} placeholder="Game Traffic" className="modal__form_control"/>
                         </div>
 
                         <div className="modal__form_group">
@@ -70,7 +90,9 @@ export default function CreateAssetModal() {
                     </section>
 
                     <section className="modal__footer">
-                        <button className="modal__submit">Submit</button>
+                        <button onClick={() => write({
+                            args: [assetDetail]
+                        })} className="modal__submit">Submit</button>
                     </section>
                 </div>
             </div>

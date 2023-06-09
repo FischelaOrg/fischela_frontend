@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 
 
@@ -6,7 +7,7 @@ const Banner = () => {
         <section className="banner">
             <div className="banner__inner_container">
                 <div className="banner__image_container">
-                    <img className="banner__image" src="/assets/banner-img.png"/>
+                    <Image alt="" className="banner__image" src="/assets/banner-img.png"/>
                 </div>
 
                 <div className="banner__minting_container">
