@@ -16,6 +16,7 @@ import { polygonMumbai } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 import type { AppProps } from "next/app";
+import { AppContextProvider } from "@/components/context/AppContext";
 
 const { chains, publicClient } = configureChains(
 	[polygonMumbai],
@@ -39,18 +40,20 @@ const wagmiConfig = createConfig({
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
-		<WagmiConfig config={wagmiConfig}>
-			<RainbowKitProvider
-				chains={chains}
-				theme={darkTheme({
-					accentColor: "#5865F2",
-					accentColorForeground: "white",
-					borderRadius: "small",
-					fontStack: "system",
-					overlayBlur: "small",
-				})}>
-				<Component {...pageProps} />
-			</RainbowKitProvider>
-		</WagmiConfig>
+		<AppContextProvider>
+			<WagmiConfig config={wagmiConfig}>
+				<RainbowKitProvider
+					chains={chains}
+					theme={darkTheme({
+						accentColor: "#5865F2",
+						accentColorForeground: "white",
+						borderRadius: "small",
+						fontStack: "system",
+						overlayBlur: "small",
+					})}>
+					<Component {...pageProps} />
+				</RainbowKitProvider>
+			</WagmiConfig>
+		</AppContextProvider>
 	);
 }

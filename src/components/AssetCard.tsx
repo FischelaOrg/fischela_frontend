@@ -1,8 +1,9 @@
-
+import { useRouter } from "next/router"
 
 const AssetCard = () => {
+    const router = useRouter()
     return (
-        <section className="asset_card">
+        <section onClick={() => {router.push("/asset/preview")}} className="asset_card">
             <div className="asset_card__image_container">
                 <img src="/assets/gta.jpeg" className="asset_card__image"/>
             </div>

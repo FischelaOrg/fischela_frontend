@@ -1,8 +1,10 @@
+import { useRouter } from "next/router"
 
 
 const LoanCard = () => {
+    const router = useRouter()
     return (
-        <section className="loan_card">
+        <section onClick={() => {router.push("/loan/preview")}} className="loan_card">
             <div className="loan_card__image_container">
                 <img src="/assets/link.png" className="loan_card__image"/>
             </div>
